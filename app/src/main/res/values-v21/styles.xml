@@ -1,13 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
+
+
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!-- <item name="android:windowAnimationStyle">@style/Animation.Activity.Style</item> -->
         <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item>
+        <item name="android:windowIsTranslucent">true</item>
         <!--<item name="android:windowBackground">@android:color/transparent</item>-->
-        <!--<item name="android:windowIsTranslucent">true</item>-->
         <!--屏幕常亮-->
         <item name="android:keepScreenOn">true</item>
         <!--&lt;!&ndash;沉浸状态栏&ndash;&gt;-->
@@ -16,33 +18,8 @@
         <!--隐藏状态栏-->
         <item name="android:windowFullscreen">?android:windowNoTitle</item>
     </style>
-
     <style name="Animation.Activity.Translucent.Style" parent="@android:style/Animation.Translucent">
         <item name="android:windowEnterAnimation">@null</item>
         <item name="android:windowExitAnimation">@null</item>
     </style>
-    <!--隐藏状态栏-->
-    <!--<item name="android:windowFullscreen">?android:windowNoTitle</item>-->
-
-    <style name="TabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textSize">15sp</item>
-    </style>
-
-    <style name="Transparent" parent="android:style/Theme.Dialog">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
-    </style>
-
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <!-- 底部出入动画 -->
-    <style name="AnimBottom" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/in_righttoleft</item>
-        <item name="android:windowExitAnimation">@anim/out_lefttoright</item>
-    </style>
-
-
-
 </resources>

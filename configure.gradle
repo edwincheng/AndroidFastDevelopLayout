@@ -1,0 +1,106 @@
+/**
+ * @ file name:    : configure.gradle
+ * @ author        : edwincheng
+ * @ e-mail        : zwp_edwincheng@163.com
+ * @ date          : 19-8-28 10:26
+ * @ description   : All dependences Relation.
+ * @ modify author :
+ * @ modify date   :
+ */
+
+ext {
+    author = [
+            name    : "edwincheng",
+            Email   : "zwp_edwicnheng@163.com"
+    ]
+
+    android = [
+            compileSdkVersion : 28,
+            buildToolsVersion : "28.0.3",
+            packageName       : "com.github.edwincheng.androidfastdeveloplayout",
+            minSdkVersion     : 21,
+            targetSdkVersion  : 28,
+            versionCode       : 1,
+            versionName       : "0.0.1"
+    ]
+
+    dependVersion = [
+            androidSupportSdkVersion : "28.0.0",
+            constraintLayout         : "1.1.3",
+            retrofitSdkVersion       : "2.6.0",
+            glideSdkVersion          : "4.8.0",
+            okhttputils              : "2.6.2",
+            rxJava                   : "2.2.9",
+            rxAndroid                : "2.1.1",
+            gson                     : "2.7",
+            eventbus                 : "3.1.1",
+            baseRecyclerAdapter      : "2.9.50",
+            marqueeview              : "1.4.0",
+            bugly                    : "latest.release",
+            annotations              : "15.0",
+            butterknife              : "8.8.1",
+            butterknifeCompiler      : "9.0.0",
+            okgo                     : "3.0.4",
+            okserver                 : "2.0.5",
+            netty                    : "4.0.47.Final",
+            fastjson                 : "1.1.56.android"
+    ]
+
+    supportDepends = [
+            //--------  support  -------
+            supportv4               : "com.android.support:support-v4:$dependVersion.androidSupportSdkVersion",
+            appcompatv7             : "com.android.support:appcompat-v7:$dependVersion.androidSupportSdkVersion",
+            constraintLayout        : "com.android.support.constraint:constraint-layout:$dependVersion.constraintLayout",
+            cardview                : "com.android.support:cardview-v7:$dependVersion.androidSupportSdkVersion",
+            design                  : "com.android.support:design:$dependVersion.androidSupportSdkVersion",
+            annotations             : "com.android.support:support-annotations:$dependVersion.androidSupportSdkVersion",
+            recyclerView            : "com.android.support:recyclerview-v7:$dependVersion.androidSupportSdkVersion"
+    ]
+
+    httpRelated = [
+            //------ http retrofit RxJava ---------
+            retrofit                 : "com.squareup.retrofit2:retrofit:$dependVersion.retrofitSdkVersion",
+            retrofitConverterGson    : "com.squareup.retrofit2:converter-gson:$dependVersion.retrofitSdkVersion",
+            retrofitAdapterRxjava2   : "com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofitSdkVersion",
+            okhttp3LoggerInterceptor : 'com.squareup.okhttp3:logging-interceptor:3.4.1',
+
+            rxJava                   : "io.reactivex.rxjava2:rxjava:$dependVersion.rxJava",
+            rxAndroid                : "io.reactivex.rxjava2:rxandroid:$dependVersion.rxAndroid",
+
+            okhttputils              : "com.zhy:okhttputils:$dependVersion.okhttputils",
+            gson                     : "com.google.code.gson:gson:$dependVersion.gson",
+            okgo                     : "com.lzy.net:okgo:$dependVersion.okgo",
+            okserver                 : "com.lzy.net:okserver:$dependVersion.okserver",
+            netty                    : "io.netty:netty-all:$dependVersion.netty",
+            fastjson                 : "com.alibaba:fastjson:$dependVersion.fastjson"
+    ]
+
+    others = [
+            eventbus          : "org.greenrobot:eventbus:$dependVersion.eventbus",
+            //bugly
+            buglyCrashReport  : "com.tencent.bugly:crashreport:$dependVersion.bugly",
+            buglyNativeReport : "com.tencent.bugly:nativecrashreport:$dependVersion.bugly",
+            annotations       : "org.jetbrains:annotations-java5:$dependVersion.annotations",
+            butterknife       : "com.jakewharton:butterknife:$dependVersion.butterknife",
+    ]
+
+    baseRecyclerViewAdapter   = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$dependVersion.baseRecyclerAdapter"
+    //image
+    glide                     = "com.github.bumptech.glide:glide:$dependVersion.glideSdkVersion"
+    glideCompiler             = "com.github.bumptech.glide:compiler:$dependVersion.glideSdkVersion"
+    marqueeview               = "com.sunfusheng:MarqueeView:$dependVersion.marqueeview"
+    butterknifeCompiler       = "com.jakewharton:butterknife-compiler:$dependVersion.butterknifeCompiler"
+
+    /////////////////   build.gradle Relation   /////////////////
+    supportLibs         = supportDepends.values()
+    networkLibs         = httpRelated.values()
+    othersLibs          = others.values()
+    baseAdapter         = [baseRecyclerViewAdapter]
+    glideLibs           = [glide]
+    marqueeviewLibs     = [marqueeview]
+
+    //APT
+    annotationProcessorLibs = [glideCompiler]
+    butterknifeAnnotation   = [butterknifeCompiler]
+
+}
