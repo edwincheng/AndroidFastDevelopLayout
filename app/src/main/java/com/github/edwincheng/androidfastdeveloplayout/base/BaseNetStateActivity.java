@@ -25,7 +25,7 @@ public abstract class BaseNetStateActivity<P extends IBaseXPresenter> extends Ap
     public abstract int getLayoutId();
     public abstract P createPresenter();
     public abstract void init();
-    public abstract void receivingNetworkState(int tyle);//网络状态的判断
+    public abstract void receivingNetworkState(int style);//网络状态的判断
     private Unbinder bind;
 
     @Override
